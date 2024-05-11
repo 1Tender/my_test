@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function reverseWords(s) {
+            const words = s.toLowerCase().match(/\b[a-z]{1,8}\b/g) || [];
+            if (!words.length) return '';
+            return words.sort().reverse().map((word, i) => `${i + 1}. ${word.padStart(8)}`).join(' ');
+        }
+        const s = "hello world, I'm a GPT-3.5 language model.";
+        console.log(reverseWords(s)); 
+    </script>
+</body>
+
+</html>
